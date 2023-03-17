@@ -1,4 +1,4 @@
-package com.example.Main;
+package com.ejercicios.tema1;
 
 public class Main {
 
