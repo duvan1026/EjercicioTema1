@@ -2,11 +2,11 @@ package com.ejercicios.tema4;
 
 public class SmartDevide {
 
-    String marca;
-    String modelo;
-    String Procesador;
-    int memoriaInterna;
-    boolean ResistenteAgua;
+    protected String marca;
+    protected String modelo;
+    protected String Procesador;
+    protected int memoriaInterna;
+    protected boolean ResistenteAgua;
 
     public SmartDevide(){
     }
