@@ -30,6 +30,11 @@ public class Main {
 
     }
 
+    /**
+     * Metodo que devuelve un string con sus caracteres en orden inverso
+     * @param texto string
+     * @return string con caracteres en orden inverso
+     */
     public static String reverse(String texto){
 
         String cadenaInversa = "";
@@ -42,6 +47,10 @@ public class Main {
 
     }
 
+    /**
+     * metodo que recorre un array y lo imprime
+     * @param array
+     */
     public static void traverseArray(String array[]){
 
         for(int i = 0; i < array.length; i++){
@@ -49,6 +58,10 @@ public class Main {
         }
     }
 
+    /**
+     * Metodo que recorre un array bidimensional y lo imprime con su respectivo indice de fila y columna
+     * @param array
+     */
     public static void printArrayInt(int array[][]){
 
         for(int i = 0; i < array.length; i++){
