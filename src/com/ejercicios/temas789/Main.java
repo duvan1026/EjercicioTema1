@@ -9,17 +9,23 @@ public class Main {
         System.out.println(stringReverse);
 
         // Exercice 2
-        String arrayBi[][] = new String[2][3];
+        String arrayBi[] = new String[2];
 
-        arrayBi[0][0] = "Hola";
-        arrayBi[0][1] = "Mundo";
-        arrayBi[0][2] = "Tierra";
-
-        arrayBi[1][0] = "Duvan";
-        arrayBi[1][1] = "Castro";
-        arrayBi[1][2] = "bautista";
+        arrayBi[0] = "Hola";
+        arrayBi[1] = "Mundo";
 
         traverseArray(arrayBi);
+
+
+        // Exercise 3
+        int arrayIntBid[][] = {
+                {1,2,3},
+                {4,5,6}
+        };
+
+        printArrayInt(arrayIntBid);
+
+
 
 
     }
@@ -36,12 +42,20 @@ public class Main {
 
     }
 
-    public static void traverseArray(String array[][]){
+    public static void traverseArray(String array[]){
 
         for(int i = 0; i < array.length; i++){
-            for(int j= 0; j < array[i].length; j++){
-                System.out.println(array[i][j]);
+                System.out.println(array[i]);
+        }
+    }
+
+    public static void printArrayInt(int array[][]){
+
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j < array[i].length; j++){
+                System.out.println("fila: " + i + " Columna: " + j + " es igual a: " + array[i][j] );
             }
         }
+
     }
 }
