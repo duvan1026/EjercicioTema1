@@ -1,5 +1,7 @@
 package com.ejercicios.temas789;
 
+import java.util.Vector;
+
 public class Main {
 
     public static void main(String[] args){
@@ -26,7 +28,43 @@ public class Main {
         printArrayInt(arrayIntBid);
 
 
+        // Exercise 4
+        Vector vector = new Vector<String>();
 
+        vector.add("Element0");
+        vector.add("Element1");
+        vector.add("Element2");
+        vector.add("Element3");
+        vector.add("Element4");
+
+        int positionDeleteArray[] = {  1, 2, 3};
+
+        removePositionVector(vector,positionDeleteArray);
+
+
+
+
+
+
+
+
+    }
+
+    public static void removePositionVector(Vector vector, int elementDelete[]){
+
+        for(int i =0; i < vector.size(); i++){
+
+            for(int position: elementDelete){
+                if(position == i){
+                    System.out.println(" i: " + i + " position: " + position + " elemento a eliminar: " + vector.get(i));
+                    vector.remove(i);
+
+                }
+            }
+
+        }
+
+        System.out.println(vector);
 
     }
 
