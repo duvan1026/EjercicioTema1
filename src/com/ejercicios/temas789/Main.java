@@ -44,6 +44,15 @@ public class Main {
         removePositionVector(vector,positionDeleteArray);
 
 
+        // Exercise 4
+        /**
+         * El problema radica en que al crear un Vector con tamaño por defecto en 1000 elementos
+         * estariamos ocupando un espacio en memoria muy grande, con un almacenamiento que no puede disminuir
+         * sino por el contrario, aumentaría si el numero de elementos a manejar se excede de esa capacidad, aumentaria nuevamente 1000 elementos
+         * volviendolo un metodo podo eficiente para el manejo de datos.
+         */
+
+
 
 
 
