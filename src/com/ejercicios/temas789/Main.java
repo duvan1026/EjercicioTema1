@@ -1,7 +1,9 @@
 package com.ejercicios.temas789;
 
 import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Vector;
 
 public class Main {
@@ -52,14 +54,37 @@ public class Main {
          * volviendolo un metodo podo eficiente para el manejo de datos.
          */
 
+        // Exercise 5
+        ArrayList<String> arrayString = new ArrayList<String>();
 
+        arrayString.add("Element1");
+        arrayString.add("Element2");
+        arrayString.add("Element3");
+        arrayString.add("Element4");
 
+        LinkedList<String> linkedListString = new LinkedList<>();
+        linkedListString.addAll(arrayString);
 
-
+        printArrayList(arrayString);
+        printLinkedList(linkedListString);
 
 
 
     }
+
+    public static void printArrayList( ArrayList<String> arrayStr ){
+
+        for(String element: arrayStr){
+            System.out.println(element);
+        }
+    }
+    public static void printLinkedList(LinkedList<String> linkedListString){
+        for(String element: linkedListString){
+            System.out.println(element);
+        }
+    }
+
+
 
     /**
      * Metodo que elimina un elemento de un vector en una posicion especifica
