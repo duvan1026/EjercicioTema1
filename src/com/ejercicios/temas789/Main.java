@@ -68,6 +68,16 @@ public class Main {
         printArrayList(arrayString);
         printLinkedList(linkedListString);
 
+        // Exercise 6
+        ArrayList<Integer> arrayListInt = new ArrayList<Integer>();
+
+        for(int i= 0; i < 10; i++){
+            if(i%2 != 0)
+                arrayListInt.add(i);
+        }
+
+        System.out.println(arrayListInt);
+
 
 
     }
