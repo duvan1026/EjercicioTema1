@@ -1,0 +1,22 @@
+
+ Números de tipo int: 
+
+ Key: Number4 Value: 5
+ Key: Number3 Value: 0
+ Key: Number2 Value: -1
+ Key: Number1 Value: 6
+ Key: Number8 Value: 2
+ Key: Number7 Value: 8
+ Key: Number6 Value: 1
+ Key: Number5 Value: 10
+ Key: Number9 Value: 100
+ Key: Number0 Value: 2
+
+ Números de tipo Double: 
+
+ Key: Double1 Value: -8.25
+ Key: Double2 Value: 4.25
+ Key: Double0 Value: 5.75
+
+ Suma de los int:  133
+ Suma de los doubles:  1.75
