@@ -69,16 +69,24 @@ public class Main {
         printLinkedList(linkedListString);
 
         // Exercise 6
+        createArrayListIntegerOddNumbers(10);
+
+        // Excersise 7
+
+
+
+    }
+
+    public static void createArrayListIntegerOddNumbers(int elements){
+
         ArrayList<Integer> arrayListInt = new ArrayList<Integer>();
 
-        for(int i= 0; i < 10; i++){
+        for(int i= 0; i <= elements; i++){
             if(i%2 != 0)
                 arrayListInt.add(i);
         }
 
         System.out.println(arrayListInt);
-
-
 
     }
 
