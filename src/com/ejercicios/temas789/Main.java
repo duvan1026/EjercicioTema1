@@ -74,6 +74,9 @@ public class Main {
         // Excersise 7
         DividePorCero(7,0);
 
+        // Exercise 8
+
+
 
 
     }
