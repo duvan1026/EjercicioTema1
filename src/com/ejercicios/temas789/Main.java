@@ -72,9 +72,28 @@ public class Main {
         createArrayListIntegerOddNumbers(10);
 
         // Excersise 7
+        DividePorCero(7,0);
 
 
 
+    }
+
+    /**
+     * metodo que dispara una excepcion si no es posble realizar la operacion aritmetica
+     * @param a numero 1
+     * @param b numero 2
+     * @throws ArithmeticException
+     */
+    public static void DividePorCero(int a, int b) throws  ArithmeticException{
+        int result = 0;
+        try{
+            result = a / b;
+            System.out.println("result : " + result);
+        }catch(ArithmeticException e ){
+            System.out.println("Esto no puede hacerse");
+        }finally {
+            System.out.println("Demo de código");
+        }
     }
 
     /**
