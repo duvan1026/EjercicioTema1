@@ -2,10 +2,7 @@ package com.ejercicios.temas789;
 
 import java.io.*;
 import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Vector;
+import java.util.*;
 
 public class Main {
 
@@ -81,8 +78,83 @@ public class Main {
         copyFile(fileInput,fileOutput);
 
 
+        // Exercise 9
+        int numeroEntero, sumaInt = 0;
+        double numeroDouble, sumaDouble = 0;
+        long number = 0;
+        String keyNumber = "";
 
+        HashMap<String, Integer> numerosInt = new HashMap<>();
+        HashMap<String, Double> numerosDouble = new HashMap<>();
 
+        File f = new File("numeros.txt");
+
+        try  (Scanner entrada = new Scanner(f)) {
+
+            //Primero están todos los int seguidos
+            while (entrada.hasNextInt()) { //mientras queden enteros por leer
+                numeroEntero = entrada.nextInt(); //se lee un entero del archivo
+                keyNumber = "Number" + number; // creamos la clave
+                numerosInt.put(keyNumber,numeroEntero); // guardamos en el Map
+                sumaInt = sumaInt + numeroEntero;  //se suma
+                number++;
+            }
+
+            number = 0;
+            //Cuando terminan los int empiezan los double
+            while (entrada.hasNextDouble()) { //mientras queden double por leer
+                numeroDouble = entrada.nextDouble(); //se lee un double del archivo
+                keyNumber = "Double" + number; // creamos la clave
+                numerosDouble.put(keyNumber,numeroDouble); // guardamos en el Map
+                sumaDouble = sumaDouble + numeroDouble; //se suma
+                number++;
+            }
+
+            PrintStream out = new PrintStream("resultadoNumeros.txt");// fichero destino
+
+            //out.close();// cierra el fichero
+            printFileMap( out,numerosInt );
+            printFileMapDouble( out, numerosDouble );
+            out.print("\n Suma de los int:  " + sumaInt);
+            out.println("\n Suma de los doubles:  " + sumaDouble);
+            out.close();// cierra el fichero
+
+        } catch (FileNotFoundException e) {
+            System.out.println(e.toString());
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+
+    }
+
+    /**
+     * metodo que imprime en el documento especifico los datos tipo int que contiene el Map indicado.
+     * @param out file donde se requiere guardar
+     * @param map Map que se requiere recorrer para guardar datos.
+     */
+    public static void printFileMap( PrintStream out, HashMap<String, Integer> map){
+
+        out.println("\n Números de tipo int: \n");
+
+        for(Map.Entry element: map.entrySet()){
+            out.print(" Key: " + element.getKey());
+            out.println(" Value: " + element.getValue());
+        }
+    }
+
+    /**
+     * metodo que imprime en el documento especifico los datos tipo Double que contiene el Map indicado.
+     * @param out file donde se requiere guardar
+     * @param map Map que se requiere recorrer para guardar datos.
+     */
+    public static void printFileMapDouble( PrintStream out, HashMap<String, Double> map){
+
+        out.println("\n Números de tipo Double: \n");
+
+        for(Map.Entry element: map.entrySet()){
+            out.print(" Key: " + element.getKey());
+            out.println(" Value: " + element.getValue());
+        }
     }
 
     /**
