@@ -1,5 +1,7 @@
 package com.ejercicios.temas789;
 
+import java.sql.Array;
+import java.util.Arrays;
 import java.util.Vector;
 
 public class Main {
@@ -37,7 +39,7 @@ public class Main {
         vector.add("Element3");
         vector.add("Element4");
 
-        int positionDeleteArray[] = {  1, 2, 3};
+        int[] positionDeleteArray = { 2, 1};
 
         removePositionVector(vector,positionDeleteArray);
 
@@ -50,22 +52,24 @@ public class Main {
 
     }
 
-    public static void removePositionVector(Vector vector, int elementDelete[]){
+    /**
+     * Metodo que elimina un elemento de un vector en una posicion especifica
+     * @param vector vector a tratar
+     * @param elementDelete array de numeros de posiciones a eliminar
+     */
+    public static void removePositionVector(Vector vector, int[] elementDelete){
 
-        for(int i =0; i < vector.size(); i++){
+        int[] positionDelete = elementDelete;
+        Arrays.sort(positionDelete);
 
-            for(int position: elementDelete){
-                if(position == i){
-                    System.out.println(" i: " + i + " position: " + position + " elemento a eliminar: " + vector.get(i));
-                    vector.remove(i);
-
-                }
+        if(positionDelete[0] >= vector.size()){
+            System.out.println(" Posicion no encontrada, por favor revisa las psoiciones a eliminar ");
+        }else {
+            for( int i = positionDelete.length - 1; i >= 0; i--){
+                vector.remove(positionDelete[i]);
             }
-
         }
-
         System.out.println(vector);
-
     }
 
     /**
