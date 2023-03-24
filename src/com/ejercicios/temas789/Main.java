@@ -77,6 +77,10 @@ public class Main {
 
     }
 
+    /**
+     * Metodo que crea un arraylist con elementos enteros en orden descendiente e imprime solo los numeros impares
+     * @param elements numero de elementos del arraList
+     */
     public static void createArrayListIntegerOddNumbers(int elements){
 
         ArrayList<Integer> arrayListInt = new ArrayList<Integer>();
