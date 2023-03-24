@@ -8,11 +8,11 @@ public class Main {
 
     public static void main(String[] args){
 
-        // Exercice 1
+        // Exercice 0
         String stringReverse = reverse("Hola Mundo");
         System.out.println(stringReverse);
 
-        // Exercice 2
+        // Exercice 1
         String arrayBi[] = new String[2];
 
         arrayBi[0] = "Hola";
@@ -21,7 +21,7 @@ public class Main {
         traverseArray(arrayBi);
 
 
-        // Exercise 3
+        // Exercise 2
         int arrayIntBid[][] = {
                 {1,2,3},
                 {4,5,6}
@@ -30,7 +30,7 @@ public class Main {
         printArrayInt(arrayIntBid);
 
 
-        // Exercise 4
+        // Exercise 3
         Vector vector = new Vector<String>();
 
         vector.add("Element0");
