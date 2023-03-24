@@ -79,6 +79,11 @@ public class Main {
 
 
         // Exercise 9
+        /**
+         * Este es un aplicativo en el cual debes agregar numeros tanto int como double
+         * en el documento nuemros.txt, el sistema los leera y los procesara agregando
+         * en el archivo resultadoNumeros.txt los numeros ingresados y sus respectivas sumatorias.
+         */
         int numeroEntero, sumaInt = 0;
         double numeroDouble, sumaDouble = 0;
         long number = 0;
