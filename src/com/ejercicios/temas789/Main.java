@@ -1,5 +1,6 @@
 package com.ejercicios.temas789;
 
+import java.io.*;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -75,10 +76,34 @@ public class Main {
         DividePorCero(7,0);
 
         // Exercise 8
+        String fileInput = "fileln.txt";
+        String fileOutput = "fileOut.txt";
+        copyFile(fileInput,fileOutput);
 
 
 
 
+    }
+
+    /**
+     * Metodo que lee bytes de un fichero y los copia en otro fichero asignado.
+     * @param fileInput fichero de lectura
+     * @param fileOutput fichero de escritura
+     */
+    public static void  copyFile( String fileInput, String fileOutput ){
+
+        try{
+            InputStream in = new FileInputStream(fileInput);
+            byte[] datos = in.readAllBytes();
+            in.close();// cierra el fichero
+
+            PrintStream out = new PrintStream(fileOutput);// fichero destino
+            out.write(datos);
+            out.close();// cierra el fichero
+
+        }catch(Exception e){
+            System.out.println("Exception:" + e.getMessage());
+        }
 
     }
 
