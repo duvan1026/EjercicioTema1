@@ -9,7 +9,5 @@ public class Main {
         cocheCRUD.save();
         cocheCRUD.findAll();
         cocheCRUD.delete();
-        
-
     }
 }
